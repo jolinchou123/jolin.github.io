@@ -1,0 +1,197 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="author" content="oxxo.studio">
+  <meta name="copyright" content="oxxo.studio">
+<embed src="hurray.mp3" hidden="true">
+  </head>
+<script src="http://d3js.org/d3.v3.min.js"></script>
+<!-- <script src="/js/lib/d3.v3.min.js"></script> -->
+
+
+<style> 
+      .home{     
+           top:50%;
+           left:50%;
+           height:120px;
+           width:120px;
+		   float:right;}
+	div{
+		position:absolute;
+		display:inline-block;
+		box-sizing: border-box;
+		width:100px;
+		height:100px;
+		padding:5px;
+		font-size:12px;
+		color:#fff;
+		text-align:center;
+		font-size:80px
+	} 
+
+	.list{
+	position:absolute;
+	left:50%;
+	top:50%;
+	margin-left:-500px;
+	margin-top:-140px;}
+	.box1{
+		left:10px;
+		background:#f26565;
+	}
+	.box2{
+		left:120px;
+		background:#fc823c;
+	}
+	.box3{
+		left:230px;
+		background:#d6e04c;
+	}
+	.box4{
+		left:340px;
+		background:#0aad8a;
+	}
+	.box5{
+		left:450px;
+		background:#1eb4ce;
+	}
+	.box6{
+		left:560px;
+		background:#4f59dd;
+	}
+	.box7{
+		left:670px;
+		background:#bc6fd6;
+	}
+	.box8{
+		left:780px;
+		background:#d66fbd;
+	}
+	.box9{
+		left:890px;
+		background:#ef8390;
+	}
+</style>
+<body>
+	 
+	<br/>
+	
+	<div class="list">
+  <div class="box1">
+	恭
+  </div>
+  <div class="box2">
+	喜
+  </div>
+  <div class="box3">
+	你
+  </div>
+   <div class="box4">
+	放
+  </div>
+   <div class="box5">
+	對
+  </div>
+   <div class="box6" id="s">
+	
+  </div>
+   <div class="box7">
+	個
+  </div>
+   <div class="box8">
+	囉
+  </div>
+   <div class="box9">
+	!
+  </div>
+</div>
+<img src = "hiphip.gif"
+     style ="position:absolute;
+             top:50%;
+             left:50%;
+	         margin-left:-150px;
+	         margin-top:-150px;">
+	<script>
+	//var valueLocal = localStorage.getItem("key");  
+	var a=localStorage.getItem("score");
+	//window.alert(a);
+	var s=document.getElementById("s");
+	s.innerHTML=a;
+	console.log(a);
+	d3Transition();
+	function d3Transition(){
+		d3.selectAll('div')
+		  .style({
+				'top':'30px'
+		  });
+		d3.select('.box1')
+			.transition()
+			.style({
+				'top':'100px'
+			});
+		d3.select('.box2')
+			.transition()
+			.duration(1000)
+			.style({
+				'top':'100px'
+			});
+		d3.select('.box3')
+			.transition()
+			.duration(1000)
+			.delay(500)
+			.style({
+				'top':'100px'
+			});
+			d3.select('.box4')
+			.transition()
+			.duration(1000)
+			.delay(1000)
+			.style({
+				'top':'100px'
+			});
+			
+			d3.select('.box5')
+			.transition()
+			.duration(1000)
+			.delay(1500)
+			.style({
+				'top':'100px'
+			});
+			d3.select('.box6')
+			.transition()
+			.duration(1000)
+			.delay(2000)
+			.style({
+				'top':'100px'
+			});
+			d3.select('.box7')
+			.transition()
+			.duration(1000)
+			.delay(2500)
+			.style({
+				'top':'100px'
+			});
+			d3.select('.box8')
+			.transition()
+			.duration(1000)
+			.delay(3000)
+			.style({
+				'top':'100px'
+			});
+			d3.select('.box9')
+			.transition()
+			.duration(1000)
+			.delay(3500)
+			.style({
+				'top':'100px'
+			});
+			
+	}
+	</script>
+	<img   src="home.png" class = "home" onclick = "window.location.href='選單(first page).html';" style = "cursor: pointer">
+</body>
+
+</html>

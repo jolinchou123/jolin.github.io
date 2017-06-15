@@ -1,0 +1,130 @@
+<!DOCTYPE html PUBLIC>
+<html>
+
+<head>
+<title>Foodie</title>
+<style type = "text/css">
+h1{text-align:center;
+   font-family:monospace;}
+
+p{font-family:DFKai-sb;
+  margin: 30px 40px;
+  line-height:1.5;}
+
+img{height:64px;
+    width:64px;}
+
+.pages{height:600px;
+   	   margin:auto;
+	   position:relative;
+       background-image:url(back.png);
+       background-position:center;
+	   background-repeat:no-repeat;
+	   background-attachment: fixed;
+	   background-size: cover;}
+	   
+.material{width: 300px;
+          height: 450px;
+          margin:30px;
+          padding:0;
+          background-color: #ffffff;
+          border: 1px solid black;
+          /* for IE */
+          filter:alpha(opacity=60);
+          /* CSS3 standard */
+          opacity:0.4;
+		  position:absolute;
+          top:50%;
+          left:50%;		
+          margin-left:-450px;
+          margin-top:-225px; 
+		  float:left;}
+		 
+.procedure{width: 600px;
+           height: 450px;
+           margin:30px;
+           padding:0;
+           background-color: #ffffff;
+           border: 1px solid black;
+           /* for IE */
+           filter:alpha(opacity=60);
+           /* CSS3 standard */
+           opacity:0.4;
+		   position:absolute;
+           top:50%;
+           left:50%;
+		   margin-left:-150px;
+		   margin-top:-225px; 
+		   float:left;}
+		   
+.startMake{position:absolute;
+           top:50%;
+           left:50%;
+           height:64px;
+           width:64px;
+		   margin-left:525px;
+		   margin-top:200px; }
+		   .home{     
+           top:50%;
+           left:50%;
+           height:120px;
+           width:120px;
+		   float:right;}
+
+</style>
+<script type = "text/javascript">
+var x;
+
+function bigImg(x){
+x.style.height = "128px";
+x.style.width = "128px";
+}
+
+function normalImg(x){
+x.style.height = "64px";
+x.style.width = "64px";
+}
+
+</script>
+</head> 
+
+<body>
+<!--page2-->
+<div class = "pages" id = "greentea">
+
+<div class = "material">
+<h1>&nbsp;Material&nbsp;</h1>
+<p>低粉 45g&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+玉米粉 10g<br>
+牛奶 55g<br>
+細砂糖 45g<br>
+油 40g<br>
+蛋 3個<br>
+抹茶粉 5g<br>
+檸檬汁 少許<br></p>
+</div>
+
+<div class = "procedure">
+<h1>Step</h1>
+<p>1. 高速打蛋白20秒，加入檸檬汁<br>
+2. 分3次加糖，第3次加糖，一起加入過篩玉米粉，<br>
+&nbsp;&nbsp;&nbsp;改低速，打到溼偏乾發<br>
+3. 抹茶粉加入低粉中<br>
+4. 製作燙麵糊， 奶+油小火加熱，用打蛋器攪拌至融合狀<br>
+5. 加入過篩粉類， 由中心向外攪拌均勻<br>
+6. 一次一顆加入蛋黃，攪拌均勻<br>
+7. 加入三分之一蛋白霜，同方向拌勻<br>
+8.倒入剩下蛋白霜，切拌至均勻<br>
+9.15公分高倒入烤模，用力敲二下，震出大氣泡<br>
+10.210/140預熱15~20分，放下二層<br>
+&nbsp;&nbsp;&nbsp;210/140，10分劃線<br>
+&nbsp;&nbsp;&nbsp;170/130，30分<br>
+11. 出爐用力敲一下，倒扣放到涼，脫模完成<br></p>
+</div>
+<img   src="home.png" class = "home" onclick = "window.location.href='選單(first page).html';" style = "cursor: pointer">
+<img onmouseover="bigImg(this)" onmouseout="normalImg(this)" src="start.png" class = "startMake" onclick = "window.location.href='遊戲(2).html';" style = "cursor: pointer">
+
+</div>
+</body>
+
+</html>

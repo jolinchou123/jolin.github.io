@@ -1,0 +1,138 @@
+<!DOCTYPE html PUBLIC>
+<html>
+
+<head>
+<title>Foodie</title>
+<style type = "text/css">
+h1{text-align:center;
+   font-family:monospace;}
+   
+p{font-family:DFKai-sb;
+  margin: 30px 40px;
+  line-height:1.5;}
+  
+img{height:64px;
+    width:64px;}
+	
+.pages{height:600px;
+       margin:auto;
+	   position:relative;
+       background-image:url(back.png);
+       background-position:center;
+	   background-repeat:no-repeat;
+	   background-attachment: fixed;
+	   background-size: cover;}
+	   
+.material{width: 300px;
+          height: 450px;
+          margin:30px;
+          padding:0;
+          background-color: #ffffff;
+          border: 1px solid black;
+          /* for IE */
+          filter:alpha(opacity=60);
+          /* CSS3 standard */
+          opacity:0.4;
+		  position:absolute;
+          top:50%;
+          left:50%;		
+          margin-left:-450px;
+          margin-top:-225px; 
+		  float:left;}
+		 
+.procedure{width: 600px;
+           height: 450px;
+           margin:30px;
+           padding:0;
+           background-color: #ffffff;
+           border: 1px solid black;
+           /* for IE */
+           filter:alpha(opacity=60);
+           /* CSS3 standard */
+           opacity:0.4;
+		   position:absolute;
+           top:50%;
+           left:50%;
+		   margin-left:-150px;
+		   margin-top:-225px; 
+		   float:left;}
+		   
+.startMake{position:absolute;
+           top:50%;
+           left:50%;
+           height:64px;
+           width:64px;
+		   margin-left:525px;
+		   margin-top:200px; }
+		   .home{     
+           top:50%;
+           left:50%;
+           height:120px;
+           width:120px;
+		   float:right;}
+
+</style>
+<script type = "text/javascript">
+var x;
+
+function bigImg(x){
+x.style.height = "128px";
+x.style.width = "128px";
+}
+
+function normalImg(x){
+x.style.height = "64px";
+x.style.width = "64px";
+}
+
+
+function tiramisu(){
+}
+
+
+</script>
+</head> 
+
+<body>
+<!--page4-->
+<div class = "pages" id = "tiramisu">
+
+<div class = "material">
+<h1>Material</h1>
+<p>1. 咖啡液部分<br>
+黑咖啡 200ml<br>
+咖啡酒 or 奶酒 隨意<br>
+2. 起司餡部分<br>
+a. 馬斯卡彭起司(Marscarpone) 500g<br>
+&nbsp;&nbsp;&nbsp;生蛋黃 3~5 顆<br>
+&nbsp;&nbsp;&nbsp;砂糖 100~150g<br>
+b. 生蛋白 2~3 顆<br>
+c. 鮮奶油 100~150ml<br>
+(b & c 可擇一或兩者皆用)<br>
+3. 其他<br>
+手指餅乾 一包<br>
+可可粉 適量<br></p>
+</div>
+
+<div class = "procedure">
+<h1>Step</h1>
+<p>1. 先泡咖啡，因為需要放涼<br>
+2. 打三顆蛋，將蛋黃蛋白分開<br>
+3. 將砂糖加入生蛋黃<br>
+4. 用攪拌器打至砂糖融化、整體成米黃色狀<br>
+5. 馬斯卡彭起司先放至室溫回溫，太冰會打不散<br>
+6. 將馬斯卡彭起司加入剛剛的蛋液中，攪拌均勻<br>
+7. 打發鮮奶油 or 蛋白至乾性發泡這個程度<br>
+8. 將鮮奶油 or 蛋白 or 兩者加入剛剛的起司餡中，<br>
+&nbsp;&nbsp;&nbsp;攪拌至光滑無顆粒<br>
+9. 等材料都備齊，組合起來就行了！<br></p>
+</div>
+<img   src="home.png" class = "home" onclick = "window.location.href='選單(first page).html';" style = "cursor: pointer">
+<img onmouseover="bigImg(this)" onmouseout="normalImg(this)" src="start.png" class = "startMake" onclick = "window.location.href='遊戲(4).html';" style = "cursor: pointer" height="64" width="64">
+
+</div>
+
+
+</body>
+
+</html>

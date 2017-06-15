@@ -1,0 +1,414 @@
+<!DOCTYPE html PUBLIC>
+<html>
+
+<head>
+<title>Foodie</title>
+<embed src="play.mp3" autostart=true hidden=true loop=true>
+<style type = "text/css">
+.show{height:600px;
+      margin:auto;
+	  position:relative;
+      background-image:url(backImg.jpg);
+      background-position:center;
+	  background-repeat:no-repeat;
+	  background-attachment: fixed;
+	  background-size:cover;
+	  }
+	  
+#bowl{width:400px;
+      height:400px;
+      background-image:url(bowl.jpg);
+	  background-position:center;
+	  background-repeat:no-repeat;
+	  background-size:400px 400px;
+      position:absolute;
+      top:50%;
+      left:50%;
+	  margin-left:-200px;
+	  margin-top:-225px;}
+
+.put{width:300px;
+     height:250px;
+	 position:absolute;
+     top:50%;
+     left:50%;
+	 margin-left:-150px;
+	 margin-top:-180px;
+	}
+	
+.icons{width:64px;
+       height:64px;
+       cursor:pointer;
+       float:left;}
+	   
+div#list {height:64px;
+          width:650px;
+		  margin:auto;
+		  line-height:2.5px;
+		  position:absolute;
+          top:50%;
+          left:50%;
+		  margin-left:-300px;
+		  margin-top:200px; 
+		  border-style:dotted;
+	      border-color:black;}
+
+div#list ul#menu {margin: 0px 0px;
+                  list-style: none;
+                  display: inline-block;}   
+				 
+div#list ul#menu li {padding: 0px;
+                     float: left;
+                     position: relative;
+                     margin-left: 5px;
+                     margin-right: 5px;
+                     width: 49px;
+                     height: 49px;}
+
+div#list ul#menu li img {position: absolute;
+                         top: 0px;
+                         left: 0px;
+                         padding: 0px;
+                         margin: 0 0 20px 0;
+                         border: none;
+                         overflow: hidden; 
+	                   	 line-height:100%;}
+
+.button1{width:150px;
+         height:40px;
+         background-image:url('button.png');
+         background-size:145px 35px;
+         color:white;
+         position:absolute;
+         top:50%;
+         left:50%;
+         margin-left: 450px;
+         margin-top: 200px;
+         font-weight:bolder;}
+
+.button2{width:150px;
+         height:40px;
+         background-image:url('button1.png');
+         background-size:145px 35px;
+         color:white;
+         position:absolute; 
+         position:absolute;
+         top:50%;
+         left:50%;
+         margin-left: 450px;
+         margin-top: 150px;
+         font-weight:bolder;
+		 }
+		 
+.ani{width:150px;
+     height:200px;
+	 background-color:pink;
+	 position:absolute; 
+     top:50%;
+     left:50%;
+     margin-left: 450px;
+     margin-top: -200px;
+	 text-align:center;
+	 font-weight:bolder;
+	 font-family: fantacy;
+	 font-size:50px;
+	 color:white;
+	 border-style: double;}
+	 .home{     
+           top:50%;
+           left:50%;
+           height:120px;
+           width:120px;
+		   float:right;}
+</style>
+
+<script type = "text/javascript">
+var total;
+var tags;
+tags = new Array();
+var point="1 2 3 4 5 6 7 8 9";
+var points= point.split(" ");
+
+function dragstartHandler(event) 
+{
+    event.dataTransfer.setData('image/jpg' ,event.currentTarget.id);
+}
+
+function dragoverHandler(event) 
+{
+    event.preventDefault();
+}
+
+function dropHandler(event) 
+{   
+    var did = event.dataTransfer.getData('image/jpg');
+    var d = document.getElementById(did);
+	event.currentTarget.appendChild(d);
+    var a = d.getAttribute("value");
+  
+     localStorage.setItem(total++,a );
+    
+     for ( var i = 0 ; i < 9 ; i++ )
+     {
+        tags[i] = localStorage[i];
+     }
+	 
+	 
+}
+function check()
+{localStorage.clear();
+    var get=0;
+    for(var i=0;i<9;i++)
+	{
+	    if(tags[i]==points[i]){get++;}
+		else if(tags[i]==null){get=-1;break;}
+		else
+		{ 
+		   tags[i]=0;
+		}	
+	}
+var key="score";
+    var a=get;
+	//window.alert(a);
+	if(a>=0&&a<=9)
+	{localStorage.setItem(key,a);
+	 window.location.href="動畫.html"}
+	else if(a==-1)
+    {window.alert("還沒做完哦\n再試一次吧");
+	 window.location.reload();}
+}
+
+function start()
+{
+
+   total=0;
+ 
+}
+window.addEventListener("load", start, false );
+
+</script>
+
+<script type="text/javascript" src="jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="jquery.bubble.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+        $("#eggwhite").mouseover(function(){
+        $("#eggwhite").css("width", "150px");
+		$("#eggwhite").css("height", "150px");
+		$("#eggwhite").css("top", "-80%");
+		$("#eggwhite").css("z-index", "100");
+		$("#food").html("這是蛋白");
+		$("#food").fadeIn('fast');
+    });     
+        $("#eggwhite").mouseout(function(){
+        $("#eggwhite").css("width", "64px");
+		$("#eggwhite").css("height", "64px");
+		$("#eggwhite").css("top", "0");
+		$("#eggwhite").css("z-index", "1");
+		$("#food").html("");
+		$("#food").fadeOut('fast');
+    });
+});
+
+$(document).ready(function(){
+        $("#lemon").mouseover(function(){
+        $("#lemon").css("width", "150px");
+		$("#lemon").css("height", "150px");
+		$("#lemon").css("top", "-80%");
+		$("#lemon").css("z-index", "100");
+		$("#food").html("這是檸檬汁");
+		$("#food").fadeIn('fast');
+    });     
+        $("#lemon").mouseout(function(){
+        $("#lemon").css("width", "64px");
+		$("#lemon").css("height", "64px");
+		$("#lemon").css("top", "0");
+		$("#lemon").css("z-index", "1");
+		$("#food").html("");
+		$("#food").fadeOut('fast');
+    });
+});
+
+$(document).ready(function(){
+        $("#sugar").mouseover(function(){
+        $("#sugar").css("width", "150px");
+		$("#sugar").css("height", "150px");
+		$("#sugar").css("top", "-80%");
+		$("#sugar").css("z-index", "100");
+		$("#food").html("這是糖");
+		$("#food").fadeIn('fast');
+    });     
+        $("#sugar").mouseout(function(){
+        $("#sugar").css("width", "64px");
+		$("#sugar").css("height", "64px");
+		$("#sugar").css("top", "0");
+		$("#sugar").css("z-index", "1");
+		$("#food").html("");
+		$("#food").fadeOut('fast');
+    });
+});
+
+$(document).ready(function(){
+        $("#corn").mouseover(function(){
+        $("#corn").css("width", "150px");
+		$("#corn").css("height", "150px");
+		$("#corn").css("top", "-80%");
+		$("#corn").css("z-index", "100");
+		$("#food").html("這是玉米粉");
+		$("#food").fadeIn('fast');
+    });     
+        $("#corn").mouseout(function(){
+        $("#corn").css("width", "64px");
+		$("#corn").css("height", "64px");
+		$("#corn").css("top", "0");
+		$("#corn").css("z-index", "1");
+		$("#food").html("");
+		$("#food").fadeOut('fast');
+    });
+});
+
+$(document).ready(function(){
+        $("#greenTea").mouseover(function(){
+        $("#greenTea").css("width", "150px");
+		$("#greenTea").css("height", "150px");
+		$("#greenTea").css("top", "-80%");
+		$("#greenTea").css("z-index", "100");
+		$("#food").html("這是抹茶粉");
+		$("#food").fadeIn('fast');
+    });   
+        $("#greenTea").mouseout(function(){
+        $("#greenTea").css("width", "64px");
+		$("#greenTea").css("height", "64px");
+		$("#greenTea").css("top", "0");
+		$("#greenTea").css("z-index", "1");
+		$("#food").html("");
+		$("#food").fadeOut('fast');
+    });
+});
+
+$(document).ready(function(){
+        $("#flour").mouseover(function(){
+        $("#flour").css("width", "150px");
+		$("#flour").css("height", "150px");
+		$("#flour").css("top", "-80%");
+		$("#flour").css("z-index", "100");
+		$("#food").html("這是麵粉");
+		$("#food").fadeIn('fast');
+    });     
+        $("#flour").mouseout(function(){
+        $("#flour").css("width", "64px");
+		$("#flour").css("height", "64px");
+		$("#flour").css("top", "0");
+		$("#flour").css("z-index", "1");
+		$("#food").html("");
+		$("#food").fadeOut('fast');
+    });
+});
+
+$(document).ready(function(){
+        $("#milk").mouseover(function(){
+        $("#milk").css("width", "150px");
+		$("#milk").css("height", "150px");
+		$("#milk").css("top", "-80%");
+		$("#milk").css("z-index", "100");
+		$("#food").html("這是牛奶");
+		$("#food").fadeIn('fast');
+    });     
+        $("#milk").mouseout(function(){
+        $("#milk").css("width", "64px");
+		$("#milk").css("height", "64px");
+		$("#milk").css("top", "0");
+		$("#milk").css("z-index", "1");
+		$("#food").html("");
+		$("#food").fadeOut('fast');
+    });
+});
+
+$(document).ready(function(){
+        $("#oil").mouseover(function(){
+        $("#oil").css("width", "150px");
+		$("#oil").css("height", "150px");
+		$("#oil").css("top", "-80%");
+		$("#oil").css("z-index", "100");
+		$("#food").html("這是油");
+		$("#food").fadeIn('fast');
+    });    
+        $("#oil").mouseout(function(){
+        $("#oil").css("width", "64px");
+		$("#oil").css("height", "64px");
+		$("#oil").css("top", "0");
+		$("#oil").css("z-index", "1");
+		$("#food").html("");
+		$("#food").fadeOut('fast');
+    });
+});
+
+$(document).ready(function(){
+        $("#egg").mouseover(function(){
+        $("#egg").css("width", "150px");
+		$("#egg").css("height", "150px");
+		$("#egg").css("top", "-80%");
+		$("#egg").css("z-index", "100");
+		$("#food").html("這是蛋黃");
+		$("#food").fadeIn('fast');
+    });     
+        $("#egg").mouseout(function(){
+        $("#egg").css("width", "64px");
+		$("#egg").css("height", "64px");
+		$("#egg").css("top", "0");
+		$("#egg").css("z-index", "1");
+		$("#food").html("");
+		$("#food").fadeOut('fast');
+    });
+});
+
+</script>
+</head> 
+
+<body>
+
+<div class = "show" id = "page2">
+<div class = "bowl" id = "bowl"  >
+<div class="put" id="put" ondragover="dragoverHandler(event)" ondrop="dropHandler(event)"></div>
+</div>
+
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css"/>
+<img src = "cheer.gif"
+     style ="position:absolute;
+             top:50%;
+             left:50%;
+	         margin-left:-500px;
+	         margin-top:-100px;">
+<h1 class="animated infinite bounce" 
+    style ="position:absolute;
+            top:50%;
+            left:50%;
+	        margin-left:-500px;
+	        margin-top:100px;"> 
+			Fighting! </h1>
+<div class = "ani" id = "food"><p>What is this</p></div>
+<script type="text/javascript">
+$("#food").fadeOut('slow');
+</script>
+<div class = "iconList" id = "list">
+<ul id="menu">
+<li><img class = "icons"value = "1"id = "eggwhite" src = "eggwhite.png" draggable="true" ondragstart="dragstartHandler(event)"> </li>
+<li><img class = "icons"value = "6"id = "flour"    src = "flour.png"    draggable="true" ondragstart="dragstartHandler(event)"> </li>
+<li><img class = "icons"value = "9"id = "egg"      src = "egg.png"      draggable="true" ondragstart="dragstartHandler(event)"> </li>
+<li><img class = "icons"value = "3"id = "sugar"    src = "sugar.png"    draggable="true" ondragstart="dragstartHandler(event)"> </li>
+<li><img class = "icons"value = "8"id = "oil"      src = "oil.png"      draggable="true" ondragstart="dragstartHandler(event)"> </li>
+<li><img class = "icons"value = "2"id = "lemon"    src = "lemon.png"    draggable="true" ondragstart="dragstartHandler(event)"> </li>
+<li><img class = "icons"value = "7"id = "milk"     src = "milk.png"     draggable="true" ondragstart="dragstartHandler(event)"> </li>
+<li><img class = "icons"value = "4"id = "corn"     src = "corn.png"     draggable="true" ondragstart="dragstartHandler(event)"> </li>
+<li><img class = "icons"value = "5"id = "greenTea" src = "greenTea.png" draggable="true" ondragstart="dragstartHandler(event)"> </li>
+</ul>
+</div>
+
+<div>
+<img   src="home.png" class = "home" onclick = "window.location.href='選單(first page).html';" style = "cursor: pointer">
+<input  type="button" class = "button1"value="阿 放錯了!" onClick="window.location.reload();">
+<input  type="button" class = "button2" value="看結果!" onClick="check()">
+</div>
+</div>
+</body>
+</html>

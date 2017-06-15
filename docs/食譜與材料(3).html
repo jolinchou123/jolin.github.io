@@ -1,0 +1,126 @@
+<!DOCTYPE html PUBLIC>
+<html>
+
+<head>
+<title>Foodie</title>
+<style type = "text/css">
+h1{text-align:center;
+   font-family:monospace;}
+   
+p{font-family:DFKai-sb;
+  margin: 30px 40px;
+  line-height:1.5;}
+
+.pages{height:600px;
+       margin:auto;
+	   position:relative;
+       background-image:url(back.png);
+       background-position:center;
+	   background-repeat:no-repeat;
+	   background-attachment: fixed;
+	   background-size: cover;}
+	   
+.material{width: 300px;
+          height: 450px;
+          margin:30px;
+          padding:0;
+          background-color: #ffffff;
+          border: 1px solid black;
+          /* for IE */
+          filter:alpha(opacity=60);
+          /* CSS3 standard */
+          opacity:0.4;
+		  position:absolute;
+          top:50%;
+          left:50%;		
+          margin-left:-450px;
+          margin-top:-225px; 
+		  float:left;}
+		 
+.procedure{width: 600px;
+           height: 450px;
+           margin:30px;
+           padding:0;
+           background-color: #ffffff;
+           border: 1px solid black;
+           /* for IE */
+           filter:alpha(opacity=60);
+           /* CSS3 standard */
+           opacity:0.4;
+		   position:absolute;
+           top:50%;
+           left:50%;
+		   margin-left:-150px;
+		   margin-top:-225px; 
+		   float:left;}
+		   
+.startMake{position:absolute;
+           top:50%;
+           left:50%;
+           height:64px;
+           width:64px;
+		   margin-left:525px;
+		   margin-top:200px; }
+		   .home{     
+           top:50%;
+           left:50%;
+           height:120px;
+           width:120px;
+		   float:right;}
+
+</style>
+<script type = "text/javascript">
+var x;
+
+function bigImg(x){
+x.style.height = "128px";
+x.style.width = "128px";
+}
+
+function normalImg(x){
+x.style.height = "64px";
+x.style.width = "64px";
+}
+
+</script>
+</head> 
+
+<body>
+<!--page3-->
+<div class = "pages" id = "strawberry">
+
+<div class = "material">
+<h1>Material</h1>
+<p>消化餅乾 80g<br>
+黃油 40g<br>
+淡奶油 250g<br>
+吉利丁粉 10g<br>
+細砂糖 35g<br>
+草莓 200g(慕斯層）<br>
+草莓 400g（裝飾）<br></p>
+</div>
+
+<div class = "procedure">
+<h1>Step</h1>
+<p>1. 將消化餅乾打至粉碎，黃油加熱到融化為止，<br>
+然後將消化餅乾粉和黃油充分的混合到一起攪拌均勻<br>
+2. 將處理好的消化餅乾均勻的鋪在蛋糕模的底部，<br>
+然後一定要壓實，在放入冰箱裡備用起來<br>
+3. 在配料中取出200g的草莓，將草莓打成草莓醬，<br>
+打成草莓醬之後加入吉利丁粉10g<br>
+4. 用小火將草莓醬加熱，攪拌使吉利丁粉在裡面溶解，<br>
+大約加熱到50度左右，再將加熱的草莓溶液放置在一邊<br>
+5. 將淡奶油加入細砂糖35g，用打蛋器中速的高速檔打發<br>
+6. 打發至表面出現明顯紋路，滴落的淡奶油可以堆疊在表面<br>
+而不是馬上消失，但是整體淡奶油還是呈液體流動狀<br>
+7. 將淡奶油和草莓溶液混合在一起，拿出刮刀用力的翻拌到均勻<br>
+8. 把蛋糕模拿出來，將草莓慕斯液倒入提前準備好的蛋糕模<br>
+9. 然手輕輕震去大氣泡後，送入冰箱冷藏4小時以上<br></p>
+</div>
+<img   src="home.png" class = "home" onclick = "window.location.href='選單(first page).html';" style = "cursor: pointer">
+<img onmouseover="bigImg(this)" onmouseout="normalImg(this)" src="start.png" class = "startMake" onclick = "window.location.href='遊戲(3).html';" style = "cursor: pointer" height="64" width="64">
+
+</div>
+</body>
+
+</html>

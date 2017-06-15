@@ -1,0 +1,133 @@
+<!DOCTYPE html PUBLIC>
+<html>
+
+<head>
+<title>Foodie</title>
+<style type = "text/css">
+h1{text-align:center;
+   font-family:monospace;}
+   
+p{font-family:DFKai-sb;
+  margin: 30px 40px;
+  line-height:1.5;}
+  
+img{height:64px;
+    width:64px;}
+	
+.pages{height:600px;
+       margin:auto;
+	   position:relative;
+       background-image:url(back.png);
+       background-position:center;
+	   background-repeat:no-repeat;
+	   background-attachment: fixed;
+	   background-size: cover;}
+
+.material{width: 300px;
+          height: 450px;
+          margin:30px;
+          padding:0;
+          background-color: #ffffff;
+          border: 1px solid black;
+          /* for IE */
+          filter:alpha(opacity=60);
+          /* CSS3 standard */
+          opacity:0.4;
+		  position:absolute;
+          top:50%;
+          left:50%;		
+          margin-left:-450px;
+          margin-top:-225px; 
+		  float:left;}
+		 
+.procedure{width: 600px;
+           height: 450px;
+           margin:30px;
+           padding:0;
+           background-color: #ffffff;
+           border: 1px solid black;
+           /* for IE */
+           filter:alpha(opacity=60);
+           /* CSS3 standard */
+           opacity:0.4;
+		   position:absolute;
+           top:50%;
+           left:50%;
+		   margin-left:-150px;
+		   margin-top:-225px; 
+		   float:left;}
+
+.startMake{position:absolute;
+           top:50%;
+           left:50%;
+           height:64px;
+           width:64px;
+		   margin-left:525px;
+		   margin-top:200px;}
+.home{     
+           top:50%;
+           left:50%;
+           height:120px;
+           width:120px;
+		   float:right;}
+</style>
+<script type = "text/javascript">
+var x;
+
+function bigImg(x){
+x.style.height = "128px";
+x.style.width = "128px";
+}
+
+function normalImg(x){
+x.style.height = "64px";
+x.style.width = "64px";
+}
+
+</script>
+</head> 
+
+<body>
+<!--page1-->
+<div class = "pages" id = "page1">
+
+<div class = "material">
+<h1>Material</h1>
+<p>1 .奶酪部分<br>
+全脂鮮奶 500cc & 300cc<br>
+鮮奶油 200cc<br>
+蛋黃 4顆<br>
+砂糖 8大匙<br>
+吉利丁 5片x2.5g=12.5g<br>
+2. 芒果醬<br>
+愛文芒果 3粒<br>
+砂糖 2大匙<br>
+水 60cc<br>
+Rum Wine 1茶匙<br></p>
+</div>
+
+<div class = "procedure">
+<h1>Step</h1>
+<p>1. 取500cc的鮮奶加入8大匙砂糖，開小火攪拌使砂糖溶解，不要煮沸<br>
+2. 將蛋黃打散後，取300cc鮮奶、200cc鮮奶油，與之混合<br>
+3. 將吉利丁片泡冰開水以變軟。吉利丁片成軟軟的片狀即可撈起<br>
+&nbsp;&nbsp;&nbsp;將泡好的吉利丁片撈起並瀝乾水分。<br>
+&nbsp;&nbsp;&nbsp;使用隔水加熱的方式，將吉利丁煮成液體狀<br>
+4. 把煮過的溫鮮奶倒進用步驟2作成的奶黃液裡<br>
+&nbsp;&nbsp;&nbsp;攪拌均勻再把吉利丁倒入混合，待冷卻奶酪液就完成了<br>
+5. 將奶酪倒入一半的容量的奶酪模型容器，放入冰箱冷凍半小時。<br>
+&nbsp;&nbsp;&nbsp;3粒芒果削皮後，一粒半的芒果切成小丁，另外一粒打成泥<br>
+&nbsp;&nbsp;&nbsp;將芒果泥加入60cc的水、1茶匙Rum、2大匙糖，開中小火煮到濃稠狀<br>
+&nbsp;&nbsp;&nbsp;把冷凍好的奶酪取出，放入剛剛做好的芒果丁及淋上一層芒果醬汁，<br>
+&nbsp;&nbsp;&nbsp;把剩餘一半的奶酪倒入容器中裝滿，放入冰箱冷藏約2.3小時<br>
+6. 取出凝結好的奶酪，再放入芒果丁及淋上芒果醬汁即可。<br>
+</p>
+</div>
+<img   src="home.png" class = "home" onclick = "window.location.href='選單(first page).html';" style = "cursor: pointer">
+<img onmouseover="bigImg(this)" onmouseout="normalImg(this)" src="start.png" class = "startMake" onclick = "window.location.href='遊戲(1).html';" style = "cursor: pointer">
+
+</div>
+
+</body>
+
+</html>

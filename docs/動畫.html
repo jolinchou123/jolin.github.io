@@ -1,0 +1,95 @@
+<!DOCTYPE html PUBLIC>
+<html>
+<meta http-equiv="refresh" content="4;url=score.html" />
+<head>
+
+<style type = "text/css">
+/*
+* Inspired by: https://dribbble.com/shots/1878348-Google-Now-3rd-Party-Apps
+*/
+
+@keyframes slide {
+    0%  {
+        transform: scale(0, 0) translateY(0);
+    }
+    
+    15%, 70% {
+        transform: scale(1, 1) translateY(0);
+    }
+    
+    90% {
+        transform: scale(1, 1) translateY(600%);
+    }
+    
+    100% {
+        transform: scale(1, 1) translateY(600%);
+    }
+}
+html {
+    height: 100%;
+}
+
+body {
+  font-family: sans-serif;
+  font-size: 11px;
+  height: 100%;
+  margin: 0;
+  background: #e6ffee;
+}
+
+.wrap {
+    width: 1000px;
+    height: 600px;
+    display: table;
+    overflow: hidden;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.apps {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.app {  
+    display: inline-block;
+    margin: 0 10px;
+    transform: scale(0, 0) translateY(0);
+    animation-name: slide;
+    animation-timing-function: linear;
+    animation-duration: 3s;}
+}
+</style>
+
+<script type = "text/javascript">
+
+</script>
+</head> 
+
+<body>
+<div class="wrap" id="animate">
+  <div class="apps">
+   
+    <div class="app">
+    <img src="芒果奶酪.png" height="60" width="60">
+    </div>
+    <div class="app">
+   <img src="提拉米蘇.png" height="70" width="70">
+    </div>
+    <div class="app">
+   <img src="草莓慕斯.png" height="80" width="80">
+    </div>
+    <div class="app">
+    <img src="抹茶戚風.png" height="90" width="90">
+    </div>
+  </div>
+</div>
+<div id="score"></div>
+</body>
+</html>
+
